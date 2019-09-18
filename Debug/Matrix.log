@@ -1,0 +1,4 @@
+﻿  Source.cpp
+c:\users\ultstudent\source\repos\matrix\matrix\source.cpp(22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\ultstudent\source\repos\matrix\matrix\source.cpp(28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Matrix.vcxproj -> C:\Users\ULTStudent\source\repos\Matrix\Debug\Matrix.exe
