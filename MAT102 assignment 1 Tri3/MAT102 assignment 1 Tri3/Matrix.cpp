@@ -139,3 +139,115 @@ CMatrix3 & CMatrix3::Inverse(CMatrix3 & _rA, CMatrix3 & _rResult)
 	return _rResult;
 	// TODO: create function body
 }
+
+CMatrix4::CMatrix4(){}
+
+CMatrix4::~CMatrix4(){}
+
+float CMatrix4::SetElement4(int _iX, int _iY, float _fValue)
+{
+	m_f4Matrix[_iX][_iY] = _fValue;
+	return _fValue;
+}
+
+float CMatrix4::GetElement4(int _iX, int _iY)
+{
+	return m_f4Matrix[_iX][_iY];
+}
+
+CMatrix3 & CMatrix4::Identity4(CMatrix3 & _rResult)
+{
+	// TODO: insert return statement here
+}
+
+CMatrix3 & CMatrix4::Zero4(CMatrix3 & _rResult)
+{
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < 4; j++) {
+			_rResult.SetElement(i, j, 0);
+		}
+	}
+	return _rResult;
+	// TODO: insert return statement here
+}
+
+bool CMatrix4::Equals4(CMatrix3 & _rA, CMatrix3 & _rB)
+{
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < 4; j++) {
+			if (_rA.GetElement(i, j) != (_rB.GetElement(i, j))) {
+				return false;
+			}
+		}
+	}
+	return true;
+}
+
+CMatrix3 & CMatrix4::Add4(CMatrix3 & _rA, CMatrix3 & _rB, CMatrix3 & _rResult)
+{
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < 4; j++) {
+			_rResult.SetElement(i,j, (_rA.GetElement(i, j) + _rB.GetElement(i, j)));
+		}
+	}
+
+	return _rResult;
+
+	// TODO: insert return statement here
+}
+
+CMatrix3 & CMatrix4::Subtract4(CMatrix3 & _rA, CMatrix3 & _rB, CMatrix3 & _rResult)
+{
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < 4; j++) {
+			_rResult.SetElement(i, j, (_rA.GetElement(i, j) - _rB.GetElement(i, j)));
+		}
+	}
+	return _rResult;
+	// TODO: insert return statement here
+}
+
+CMatrix3 & CMatrix4::Multiply4(float _fScalar, CMatrix3 & _rA, CMatrix3 & _rResult)
+{
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < 3; j++) {
+			_rResult.SetElement(i,j,(_rA.GetElement(i,j) * _fScalar));
+		}
+	}
+	return _rResult;
+	// TODO: insert return statement here
+}
+
+CMatrix3 & CMatrix4::Multiply4(CMatrix3 & _rA, CMatrix3 & _rB, CMatrix3 & _rResult)
+{
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < 4; j++) {
+			_rResult.SetElement(i,j, 0.0f);
+			for (int k = 0; k < 3; k++) {
+				_rResult.SetElement(i,j,(_rResult.GetElement(i,j) + _rA.GetElement(i,k) * _rB.GetElement(k,j)));
+			}
+		}
+	}
+	return _rResult;
+	// TODO: insert return statement here
+}
+
+CMatrix3 & CMatrix4::Transpose4(CMatrix3 & _rA, CMatrix3 & _rResult)
+{
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < 4; j++) {
+			_rResult.SetElement(i,j, _rA.GetElement(j,i));
+		}
+	}
+	// TODO: insert return statement here
+}
+
+float CMatrix4::Detriminant4(CMatrix3 & _rA)
+{
+	return 0.0f;
+}
+
+CMatrix3 & CMatrix4::Inverse4(CMatrix3 & _rA, CMatrix3 & _rResult)
+{
+	// TODO: insert return statement here
+}

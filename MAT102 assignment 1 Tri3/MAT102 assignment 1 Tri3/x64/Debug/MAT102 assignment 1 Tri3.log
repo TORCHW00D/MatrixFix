@@ -1,0 +1,4 @@
+﻿  Source.cpp
+c:\users\ultstudent\documents\matrixfix\mat102 assignment 1 tri3\mat102 assignment 1 tri3\source.cpp(22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\ultstudent\documents\matrixfix\mat102 assignment 1 tri3\mat102 assignment 1 tri3\source.cpp(28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  MAT102 assignment 1 Tri3.vcxproj -> C:\Users\ULTStudent\Documents\MatrixFix\MAT102 assignment 1 Tri3\x64\Debug\MAT102 assignment 1 Tri3.exe
